@@ -68,7 +68,7 @@ static bl_cadence_t LED_cadences[] = {
 #define BL_LED_STATE_OFF 0
 #define BL_LED_STATE_ON 1
 
-typedef struct {
+static typedef struct {
 	bl_cadence_t *cadence;
 	int duration_ms;
 	const char * name;
