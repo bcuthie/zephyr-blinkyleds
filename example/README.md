@@ -1,8 +1,3 @@
-.. zephyr:code-sample:: blinky
-   :name: Blinky
-   :relevant-api: blinkyleds
-
-   Blink an LED forever using blinkyleds.
 
 Overview
 ********
