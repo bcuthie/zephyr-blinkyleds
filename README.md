@@ -81,7 +81,7 @@ generating noticeable effects on the LEDs themselves. For instance,
 
 results in the same behavior, no matter how many times, or how often, it is 
 invoked. This means your application can set LED state when necessary and convenient, 
-withour regard to cadence timing.
+without regard to cadence timing.
 
 ## Custom Cadences
 
