@@ -110,7 +110,7 @@ application to define custom cadences.
 static const uint16_t my_special_pattern[] = {
     BL_C_ON(980), 
     BL_C_OFF(20), 
-    BL_C_ON(980), 
+    BL_C_ON(200), 
     BL_C_OFF(20), 
     BL_C_END
 };
