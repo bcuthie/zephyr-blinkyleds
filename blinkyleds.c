@@ -37,7 +37,7 @@
 static K_MUTEX_DEFINE(led_mtx);
 
 #define LEDS_NODE DT_CHOSEN(zephyr_blinkyleds)
-const struct device *const led_dev = DEVICE_DT_GET(LEDS_NODE);
+static const struct device *const led_dev = DEVICE_DT_GET(LEDS_NODE);
 
 static const uint16_t LEDPAT_off[] = {BL_C_OFF(100), BL_C_END};
 static const uint16_t LEDPAT_on[] = {BL_C_ON(100), BL_C_END};
