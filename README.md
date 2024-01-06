@@ -64,7 +64,7 @@ might call
 `bl_set_led_state("led_1", BL_CADENCE_ON, 75);`
 
 to cause led_1 to illuminate for 75ms, then automatically turn off. Repeated calls supercede previous ones, so
-the more activity the more the LED will illuminate. Called frequently enough, the LED would illuminate
+in this example the more activity the more the LED will illuminate. Called frequently enough, the LED would illuminate
 continually.
 
 It's also useful, sometimes, to specify longer durations. Say you want to indicate some
@@ -73,6 +73,15 @@ error condition for a few seconds. With blinkyleds
 `bl_set_led_state("led_1", BL_CADENCE_FLICKER, 5000);`
 
 will cause led_1 to flicker for 5 seconds, then automatically turn off.
+
+Because blinkyleds synchronizes cadences, you can call the API as often as needed without 
+generating noticeable effects on the LEDs themselves. For instance, 
+
+`bl_set_led_state("led_1", BL_CADENCE_BLINK, BL_DURATION_FOREVER);` 
+
+results in the same behavior, no matter how many times, or how often, it is 
+invoked. This means your application can set LED state when necessary and convenient, 
+withour regard to cadence timing.
 
 ## Custom Cadences
 
