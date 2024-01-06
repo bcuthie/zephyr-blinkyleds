@@ -33,8 +33,14 @@ LEDs are referenced by their device tree node name. So, for example, if your dev
 has a `leds` section like this:
 
 ```
-leds {
+
+chosen {
+    zephyr,blinkyleds = &blinkyleds;
+};
+
+blinkyleds {
     compatible = "gpio-leds";
+	status = "okay";
 
     led_1 {
         gpios = <&gpioa 5 GPIO_ACTIVE_HIGH>;
@@ -46,9 +52,21 @@ leds {
 
 };
 
+otherleds {
+    compatible = "gpio-leds";
+	status = "okay";
+
+    led_other {
+        gpios = <&gpioa 7 GPIO_ACTIVE_HIGH>;
+    };
+};
+
+
 ```
 
-you would refer to LEDs as "led_1" and "led_2" when using the blinkyleds API.
+you would refer to LEDs as "led_1" and "led_2" when using the blinkyleds API. The
+`chosen` dts entry allows you to separate LEDs into those that you want blinkyleds
+to manage, and others that you may control directly with your application.
 
 For instance,
 
