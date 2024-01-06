@@ -13,7 +13,7 @@ Blinkyleds offers the following features:
 - Compact: only a single source file (plus header)
 - Simple "set it, and forget it" LED control
 - Provides 9 standard LED cadences
-- Requires almost no application confiugration when using standard cadences
+- Requires almost no application configuration when using standard cadences
 - completely static memory usage
 - supports user defined cadences
 - LED cadences are synchronized
@@ -118,7 +118,7 @@ static const uint16_t my_special_pattern[] = {
 static cadence_t my_cadence = DEFINE_CADENCE(my_special_pattern);
 ```
 
-When using custom cadences it's necessary to register them with blinkylights 
+When using custom cadences it's necessary to register them with blinkyleds 
 before use. This is usually best done at application startup with something like
 
 `bl_register_cadence(&my_cadence);`
