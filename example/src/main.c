@@ -15,8 +15,5 @@ int main(void)
 {
 	bl_set_led_state("led_2", BL_CADENCE_BLINK, BL_DURATION_FOREVER);
 	
-	while (1) {
-		k_msleep(SLEEP_TIME_MS);
-	}
 	return 0;
 }
