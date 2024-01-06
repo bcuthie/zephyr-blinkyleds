@@ -32,8 +32,6 @@
 #include <zephyr/logging/log.h>
 #include "blinkyleds.h"
 
-/* TODO: make these configurable */
-LOG_MODULE_REGISTER(blinkyleds, LOG_LEVEL_INF);
 #define TIME_QUANTUM_MS 20
 
 static K_MUTEX_DEFINE(led_mtx);
