@@ -38,7 +38,7 @@ chosen {
     zephyr,blinkyleds = &blinkyleds;
 };
 
-blinkyleds {
+blinkyleds: leds {
     compatible = "gpio-leds";
 	status = "okay";
 
