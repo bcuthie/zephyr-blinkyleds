@@ -2,9 +2,7 @@
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/gpio.h>
 
-
 #include "blinkyleds.h"
-
 
 #define DELAY	10000
 
@@ -35,13 +33,13 @@ char * cadence_str[] = {
 int main(void)
 {
 	unsigned int index = 0;
+
+	/* demo each of the cadences */
 	while (1) {
 		printf("using cadence (%s)\n", cadence_str[index]);
 		bl_set_led_state("led_1", cadence[index], BL_DURATION_FOREVER);
 		k_sleep(K_MSEC(DELAY));
 		index = ((index + 1) % 9);
-				
-
 	}
 	
 	return 0;
