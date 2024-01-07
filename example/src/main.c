@@ -38,8 +38,9 @@ int main(void)
 	while (1) {
 		printf("using cadence (%s)\n", cadence_str[index]);
 		bl_set_led_state("led_1", cadence[index], BL_DURATION_FOREVER);
-		k_sleep(K_MSEC(DELAY));
 		index = ((index + 1) % 9);
+
+		k_sleep(K_MSEC(DELAY));
 	}
 	
 	return 0;
